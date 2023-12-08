@@ -21,9 +21,6 @@ jobs:
   upload-assets:
     needs: create-release
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: fbx-sanitizer
     steps:
       - uses: actions/checkout@v4
       - uses: taiki-e/upload-rust-binary-action@v1
@@ -33,3 +30,4 @@ jobs:
           bin: ...
           # (required) GitHub token for uploading assets to GitHub Releases.
           token: ${{ secrets.GITHUB_TOKEN }}
+          manifest-path: fbx-sanitizer
