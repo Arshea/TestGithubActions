@@ -21,6 +21,9 @@ jobs:
   upload-assets:
     needs: create-release
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fbx-sanitizer
     steps:
       - uses: actions/checkout@v4
       - uses: taiki-e/upload-rust-binary-action@v1
