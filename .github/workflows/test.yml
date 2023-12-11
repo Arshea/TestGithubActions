@@ -45,6 +45,7 @@ jobs:
           bin: fbx_sanitizer
           tar: unix
           zip: windows
+          target: ${{ matrix.target }}
           # (required) GitHub token for uploading assets to GitHub Releases.
           token: ${{ secrets.GITHUB_TOKEN }}
           manifest-path: fbx-sanitizer/Cargo.toml
